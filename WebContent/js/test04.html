@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+취미 : 잠<input type="checkbox" name="hobby" value="잠">
+영화<input type="checkbox" name="hobby" value="영화">
+야구<input type="checkbox" name="hobby" value="야구">
+<br>
+성별 : 남<input type="radio" name="trans" value="1">
+여<input type="radio" name="trans" value="2"><br>
+<button onclick="ch()">값 확인</button><br>
+<div id="rDiv"></div>
+<script type="text/javascript">
+	function ch(){
+		var rd=document.querySelector("#rDiv");
+		var chv=document.querySelectorAll("input[name=hobby]:checked");
+		var hobbies ="";
+		
+		for(var i=0;i<chv.length;i++){
+			hobbies +=chv[i].value+", ";
+			console.log(hobbies.length);
+		}
+		hobbies=hobbies.substring(0,hobbies.length-2);
+		console.log(hobbies);
+
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/js/test08.jsp">
+		id : <input type="text" id='id' name="id"><br> <!-- id는 javascript에서 대부분사용 name넘길라믄잇어야해 -->
+		pwd :<input type="password" id='pwd' name="pwd"><br>
+		<button type="button" onclick="checkValue()">로그인</button>
+	</form>
+	<script type="text/javascript">/* 자바스크립트는 무조건 재정의(오버라이딩?) 된다 파라미터가 달라도! 언디파인드가 뜬다 */
+		function checkValue(){
+			var idObj = document.querySelector('#id');
+			var pwdObj = document.querySelector('#pwd');
+			
+			if(idObj.value.trim().length<4){
+				alert('id는 4글자 이상입니다.');
+				idObj.value='';
+				idObj.focus();
+				return false;
+			}
+			if(pwdObj.value.trim().length<5){
+				alert('pwd는 5글자 이상입니다.');
+				pwdObj.value='';
+				pwdObj.focus();
+				return false;
+			}
+			return true;
+			/* trim()-공백없애 주는함수 */
+		}
+	</script>
+</body>
+</html>

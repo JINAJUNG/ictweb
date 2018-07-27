@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	이름 :
+	<input type="text" id="name" name="name">
+	<br> 취미 :
+	<input type="text" id="hobby" name="hobby">
+	<br>
+	<button onclick="result()">입력</button>
+	<br> 결과 :
+	<textarea id="result"></textarea>
+
+	<div id="rdiv">
+		<div class="f">첫번째 디브</div>
+		<div class="l">두번째 디브</div>
+	</div>
+
+	<script type="text/javascript">
+	function result(){
+		var fDiv = document.querySelector("div.f");
+		alert(fDiv.innerHTML);
+	}
+	
+/* 	<!--
+	document.querySelector,(All도있음-length가 1 이라도 배열로 나옴)
+	document.getElementById
+	비슷하고 같음.
+	
+	--> */
+/* 	function result(){
+		var nameObj = document.querySelector("#name"); <!-- 단일 객체,여러개를 넣어도 처음넣은것만 들어간다. -->
+		var inputObjs = document.querySelectorAll("input"); <!-- 하나가 존재해도 배열 -->
+		
+		for(var i = 0;i<inputObjs.length;i++){
+			console.log(inputObjs[i].value);
+			var inputSplit = inputObjs[i].value.split(",");
+			if(inputSplit!=null){
+				for(var j=0;j<inputSplit.length;j++){
+					console.log(inputSplit[j].value);
+					alert(inputSplit[j].value);
+				}
+			}
+		}
+		alert(inputObjs)
+		alert(nameObj.value);
+	} */
+	
+		/* function result() {
+			var nameObj = document.getElementById("name");
+			var hobbyObj = document.getElementById("hobby");
+			var hobs = hobbyObj.value.split(",");
+			var str = nameObj.value;
+			str += "님 안녕하세요\r\n당신의 취미는 \r\n";
+			for (var i = 0; i < hobs.length; i++) {
+				str += (i + 1) + ". " + hobs[i] + "\r\n";
+			}
+
+			var resultObj = document.getElementById("result");
+			resultObj.value = str;
+
+		} */
+
+		/* document.write("나나");
+			document.write("<br>너너");
+			document.write("이이"); */
+
+		/* var name = prompt("이름이뭔가요?","");
+		var str = "취미가 먼가요? 여러개면 ,를 구분자로 넣어주세요";
+		var hobbies = prompt("" + str);
+		var hobs = hobbies.split(",");
+		console.log(hobs);
+
+		document.write(name+"님의 취미는 <br>");
+		for (var i = 0; i < hobs.length; i++) {
+			document.write((i + 1) + hobs[i]+"<br>");
+		} */
+	</script>
+</body>
+</html>

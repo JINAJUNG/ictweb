@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border='1'>
+		<tr>
+			<td>난 단일 테이블의 티디티디</td>
+		</tr>
+	</table>
+<div class="container">
+	<table border='1'>
+		<tr>
+			<td>난 테이블의 티디티디</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	var tal = document.querySelector(".container table tr td"); /* .container table tr td -> .container td로 생략해서 td찾을 수 있듐 */
+	alert(tal.innerHTML);
+	tal.innerHTML="자바스크립트로 바꾼 내용 이지렁 에베베벱ㅂ";
+	alert(tal.innerHTML);
+</script>
+</body>
+</html>

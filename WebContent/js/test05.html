@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="rDiv"></div>
+	<script type="text/javascript">
+		var rDiv = document.querySelector('#rDiv');
+		var str = "<table border='1'>";
+		for (var i = 1; i < 10; i++) {
+			if (i % 3 == 1) {
+				str += '<tr>';
+			}
+			str += '<td>' + i + '</td>';
+			if (i % 3 == 0) {
+				str += '</tr>';
+			}
+		}
+		str += "</table>";
+		rDiv.innerHTML = str;
+	</script>
+</body>
+</html>
+<!-- 
+		var str = "<table border='1'><tr>";
+		for (var i = 1; i < 10; i++) {
+			str += '<td>' + i + '</td>';
+			if (i % 3 == 0) {
+				str+='</tr><tr>';
+			}
+		} 이거는 무조건 tr을 닫고 여는거라 마지막에 불필요한 <tr>이 하나 더 생성된다. 그리고 html이 알아서</tr>을 만들어서 4개의 tr이 생성된다. 위에께 맞음
+		 -->
+<!-- 			for (var j = 2; j < 10; j++) {
+				str += '<td>&nbsp;&nbsp;'+j + 'X' + i + '=' + (i * j) + '&nbsp;&nbsp;</td>';/* innerHTML은 변수(많은기능을 하는), ()가없자나~ 객체는 변수거나 함수!*/ 
+			}
+-->
