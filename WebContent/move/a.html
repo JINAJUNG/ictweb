@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="#" onclick="goPage(this)" target="_blank">네이버</a><br>
+	<a href="#" onclick="goPage(this)" target="_blank">다음</a><br> <!-- onclick을 먼저 실행해서 href를 바꾼후 href를 탄다 -->
+	<!-- _self현재창에서이동 _blank새탭으로 뜸  -->
+	<a href="#test">gogolet'sgo</a>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p><br>
+	<p id='test'>책갈피<br>
+	<script type="text/javascript">
+		var urlMap = {
+			'네이버' : 'http://naver.com',
+			'다음' : 'http://daum.net'
+		};//(오브젝트 구조) c의 스트럭트(구조체)와 더 비슷,왼쪽 키 오른쪽 벨류
+		//urlMap.네이버 가능하나 한글사용하지말기
+
+		function goPage(aObj) {
+			aObj.href = urlMap[aObj.innerHTML];
+		}
+	</script>
+</body>
+</html>
